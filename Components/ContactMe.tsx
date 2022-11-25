@@ -103,7 +103,9 @@ export default function ContactMe({}: Props) {
             className="contactInput"
             placeholder="Message"
           />
-          <p className="text-red-500 animate-pulse">{errors.email?.message}</p>
+          <p className="text-red-500 animate-pulse">
+            {errors.message?.message}
+          </p>
           <button
             type="submit"
             className="bg-[#E30B5C] py-5 pc-10 rounded-md text-lg  text-black font-bold"
