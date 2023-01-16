@@ -30,6 +30,7 @@ export default function Projects({}: Props) {
               viewport={{ once: true }}
             >
               <Image
+                alt="image"
                 src="/images/Product-img.jpg"
                 width={500}
                 height={500}
@@ -37,10 +38,12 @@ export default function Projects({}: Props) {
             </motion.div>
             <div className=" space-y-10 px-0 md:px-10 max-w-6xl">
               <h4 className="text-4xl font-semibold text-center ">
-                {" "}
-                <span className="underline decoration-[#E30B5C] ">
-                  Case study {Projects}
-                </span>{" "}
+                <>
+                  {" "}
+                  <span className="underline decoration-[#E30B5C] ">
+                    <>Case study {Projects}</>
+                  </span>{" "}
+                </>
                 ups clone
               </h4>
               <p className="text-lg text-center md:text-left">

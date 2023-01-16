@@ -31,7 +31,7 @@ export default function ContactMe({}: Props) {
   });
   const onSubmit: SubmitHandler<Inputs> = (formdata) => console.log(formdata);
 
-  console.log(watch("example")); // watch input value by passing the name of it
+  // watch input value by passing the name of it
 
   return (
     <div className="h-screen flex text-central relative overflow-hidden md:text-left flex-col  md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
