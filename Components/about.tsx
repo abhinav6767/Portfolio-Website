@@ -36,6 +36,7 @@ export default function about({}: Props) {
           src="/images/me.jpg "
           height={500}
           width={500}
+          alt="Image"
         ></Image>
       </motion.div>
       <div className="space-y-10 px-0 md:px-10">

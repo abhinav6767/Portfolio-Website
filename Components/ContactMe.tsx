@@ -31,7 +31,7 @@ export default function ContactMe({}: Props) {
   });
   const onSubmit: SubmitHandler<Inputs> = (formdata) => console.log(formdata);
 
-  console.log(watch("example")); // watch input value by passing the name of it
+  // watch input value by passing the name of it
 
   return (
     <div className="h-screen flex text-central relative overflow-hidden md:text-left flex-col  md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
@@ -103,7 +103,9 @@ export default function ContactMe({}: Props) {
             className="contactInput"
             placeholder="Message"
           />
-          <p className="text-red-500 animate-pulse">{errors.email?.message}</p>
+          <p className="text-red-500 animate-pulse">
+            {errors.message?.message}
+          </p>
           <button
             type="submit"
             className="bg-[#E30B5C] py-5 pc-10 rounded-md text-lg  text-black font-bold"

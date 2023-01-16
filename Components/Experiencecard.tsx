@@ -22,6 +22,7 @@ export default function Experiencecard({}: Props) {
       >
         <div className="flex flex-col items-center">
           <Image
+            alt="image"
             className="   w-32 h-32 rounded-full object-center object-cover md:rounded-full xl:w-[200px] xl:h-[200opx]"
             src={"/images/Toyota-logo-min.png"}
             width={500}

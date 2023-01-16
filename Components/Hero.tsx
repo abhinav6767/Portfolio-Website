@@ -3,6 +3,7 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircle from "./BackgroundCircle";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 type Props = {};
 
 export default function Hero({}: Props) {
@@ -20,13 +21,33 @@ export default function Hero({}: Props) {
   return (
     <div className="h-screen flex flex-col space-y-8 items-center text-center overflow-hidden justify-center">
       <BackgroundCircle />
-      <Image
-        className="relative rounded-full h-32 w-32 mx-auto object-cover "
-        src="/images/me.jpg"
-        alt="Picture of the author"
-        width={500}
-        height={500}
-      />
+      <motion.div
+        initial={{ scale: 1 }}
+        animate={{
+          scale: [1, 2, 2, 3, 1],
+        }}
+        transition={{
+          default: {
+            ease: [0, 0.71, 0.2, 1.01, 1],
+            duration: 3,
+          },
+
+          scale: {
+            type: "spring",
+            damping: 5,
+            stiffness: 100,
+            restDelta: 0.001,
+          },
+        }}
+      >
+        <Image
+          className="relative rounded-full h-32 w-32 mx-auto object-cover "
+          src="/images/me.jpg"
+          alt="Picture of the author"
+          width={500}
+          height={500}
+        />
+      </motion.div>
       <div className="z-20">
         <h2 className="uppercase text-sm text-gray-500 pb-2 tracking-[15px] ">
           Sofweare Engineer
@@ -35,7 +56,7 @@ export default function Hero({}: Props) {
           <span className="">{text}</span>
           <Cursor cursorColor="#E30B5C" />
         </h1>
-        <div>
+        <div className="mt-4">
           <Link href="#about">
             <button className="herobuttons">About</button>
           </Link>
